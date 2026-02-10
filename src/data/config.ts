@@ -1,45 +1,39 @@
 const config = {
-  title: "Naresh Khatri | Full-Stack Developer",
+  title: "Enes Aydın | Student Developer",
   description: {
-    long: "Explore the portfolio of Naresh, a full-stack developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
+    long: "Explore the portfolio of Enes, a student developer and creative technologist specializing in interactive web experiences, Mobile Apps, and innovative projects. Discover my latest work. Let's build something amazing together!",
     short:
-      "Discover the portfolio of Naresh, a full-stack developer creating interactive web experiences and innovative projects.",
+      "Discover the portfolio of Enes, a student developer creating interactive web experiences and innovative projects.",
   },
   keywords: [
-    "Naresh",
+    "Enes",
     "portfolio",
-    "full-stack developer",
+    "student developer",
     "creative technologist",
     "web development",
-    "3D animations",
-    "interactive websites",
-    "Coding Ducks",
-    "The Booking Desk",
-    "Ghostchat",
+    "Mobile Apps",
     "web design",
-    "GSAP",
     "React",
     "Next.js",
-    "Spline",
-    "Framer Motion",
+    "Java",
+    "Flutter",
+    "Python"
   ],
-  author: "Naresh Khatri",
-  email: "naresh.khatri2345@gmail.com",
-  site: "https://nareshkhatri.site",
+  author: "Enes Aydın",
+  email: "aydinenes.dev@gmail.com",
+  site: "https://enesaydin.site",
 
   // for github stars button
-  githubUsername: "naresh-khatri",
+  githubUsername: "Primeteumm",
   githubRepo: "3d-portfolio",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
-    linkedin: "https://www.linkedin.com/in/naresh-khatri/",
-    instagram: "https://www.instagram.com/hotchaddi",
-    facebook: "https://www.facebook.com/HotChaddi/",
-    github: "https://github.com/Naresh-Khatri",
+    linkedin: "https://www.linkedin.com/in/enes-ayd%C4%B1n-3594773a0/",
+    instagram: "https://www.instagram.com/eness_aydiin",
+    github: "https://github.com/Primeteumm",
   },
 };
 export { config };
