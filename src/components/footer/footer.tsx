@@ -10,7 +10,16 @@ function Footer() {
   return (
     <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t border-border px-4 py-6 sm:flex-row md:px-6 sm:justify-between">
       <p className="text-xs text-gray-500 dark:text-gray-400">
-        © {year} {config.author}. All rights reserved.
+        Thanks to{" "}
+        <a
+          href="https://github.com/Naresh-Khatri/3d-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 hover:text-gray-300 transition-colors"
+        >
+          Naresh Khatri
+        </a>
+        {" "}for the awesome template ❤️
       </p>
       <SocialMediaButtons />
       <nav className="flex gap-4 sm:gap-6 z-10">
