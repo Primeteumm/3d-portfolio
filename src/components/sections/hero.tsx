@@ -110,7 +110,7 @@ const HeroSection = () => {
                           variant={"outline"}
                           className="block w-full overflow-hidden"
                         >
-                          Hire Me
+                          Contact Me
                         </Button>
                       </Link>
                     </TooltipTrigger>
@@ -119,14 +119,7 @@ const HeroSection = () => {
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">
-                    <Link
-                      href={config.social.twitter}
-                      target="_blank"
-                    >
-                      <Button variant={"outline"}>
-                        <SiX size={24} />
-                      </Button>
-                    </Link>
+
                     <Link
                       href={config.social.github}
                       target="_blank"
