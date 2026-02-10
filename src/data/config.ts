@@ -9,7 +9,7 @@ const config = {
     "Enes",
     "portfolio",
     "student developer",
-    "creative technologist",
+    "creative developer",
     "web development",
     "Mobile Apps",
     "web design",

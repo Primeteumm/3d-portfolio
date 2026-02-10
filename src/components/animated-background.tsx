@@ -431,6 +431,12 @@ const AnimatedBackground = () => {
         className="w-full h-full fixed"
         ref={splineContainer}
         onLoad={(app: Application) => {
+          // Hide removed skill keys from the 3D keyboard
+          const hiddenKeys = ["vue", "tailwind", "express", "mongodb", "prettier", "wordpress", "linux", "docker", "nginx", "aws", "vim"];
+          hiddenKeys.forEach((key) => {
+            const obj = app.findObjectByName(key);
+            if (obj) obj.visible = false;
+          });
           setSplineApp(app);
           bypassLoading();
         }}
