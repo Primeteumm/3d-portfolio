@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       <SectionHeader id='projects' title="Projects" />
       <div className="grid grid-cols-1 md:grid-cols-3">
         {projects.map((project, index) => (
-          <Modall key={project.src} project={project} />
+          <Modall key={project.id} project={project} />
         ))}
       </div>
     </SectionWrapper>
@@ -39,13 +39,27 @@ const Modall = ({ project }: { project: Project }) => {
             className="relative w-[400px] h-auto rounded-lg overflow-hidden"
             style={{ aspectRatio: "3/2" }}
           >
-            <Image
-              className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
-              src={project.src}
-              alt={project.title}
-              width={300}
-              height={300}
-            />
+            {project.src ? (
+              <Image
+                className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
+                src={project.src}
+                alt={project.title}
+                width={300}
+                height={300}
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-start justify-center pt-10 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black transition-all group-hover/modal-btn:scale-[1.05]">
+                {project.icon && (
+                  <Image
+                    src={project.icon}
+                    alt={project.title}
+                    width={88}
+                    height={88}
+                    className="drop-shadow-2xl"
+                  />
+                )}
+              </div>
+            )}
             <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
               <div className="flex flex-col h-full items-start justify-end p-6">
                 <div className="text-lg text-left">{project.title}</div>

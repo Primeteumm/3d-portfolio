@@ -10,6 +10,7 @@ import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
 import {
   SiChakraui,
   SiDocker,
+  SiElectron,
   SiExpress,
   SiFirebase,
   SiJavascript,
@@ -30,7 +31,15 @@ import {
 import { TbBrandFramerMotion } from "react-icons/tb";
 const BASE_PATH = "/assets/projects-screenshots";
 
-const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
+const ProjectsLinks = ({
+  live,
+  repo,
+  liveLabel = "Visit Website",
+}: {
+  live: string;
+  repo?: string;
+  liveLabel?: string;
+}) => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-start gap-3 my-3 mb-8">
       <Link
@@ -40,7 +49,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
         href={live}
       >
         <Button variant={"default"} size={"sm"}>
-          Visit Website
+          {liveLabel}
           <ArrowUpRight className="ml-3 w-5 h-5" />
         </Button>
       </Link>
@@ -222,12 +231,20 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiSupabase />,
   },
+  electron: {
+    title: "Electron",
+    bg: "black",
+    fg: "white",
+    icon: <SiElectron />,
+  },
 };
 export type Project = {
   id: string;
   category: string;
   title: string;
   src: string;
+  /** Optional logo shown on the card when there is no screenshot (`src` is empty). */
+  icon?: string;
   screenshots: string[];
   skills: { frontend: Skill[]; backend: Skill[] };
   content: React.ReactNode | any;
@@ -236,18 +253,58 @@ export type Project = {
 };
 const projects: Project[] = [
   {
-    id: "project-1",
-    category: "Coming Soon",
-    title: "Coming Soon",
+    id: "screenshot-enhancer",
+    category: "Open Source · Desktop App",
+    title: "Screenshot Enhancer",
     src: "",
+    icon: "/assets/projects-screenshots/screenshot-enhancer/icon.png",
     screenshots: [],
-    skills: { frontend: [], backend: [] },
-    live: "",
+    skills: {
+      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.electron],
+      backend: [PROJECT_SKILLS.node],
+    },
+    live: "https://github.com/Primeteumm/Screenshot-Enhancer/releases/latest",
+    github: "https://github.com/Primeteumm/Screenshot-Enhancer",
     get content() {
       return (
         <div>
-          <TypographyP className="font-mono text-center">
-            🚧 This project is currently under construction. Stay tuned! 🚀
+          <TypographyP className="font-mono text-2xl text-center">
+            The macOS screenshot preview, for Windows.
+          </TypographyP>
+          <TypographyP className="font-mono">
+            Take a screenshot the way you always do and a floating thumbnail
+            pops up next to your cursor. Drag it straight into WhatsApp, Slack,
+            Discord, a browser upload field or any folder. No hunting for
+            files, no opening, no renaming.
+          </TypographyP>
+          <ProjectsLinks
+            live={this.live}
+            repo={this.github}
+            liveLabel="Download for Windows"
+          />
+          <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
+          <ul className="font-mono list-disc ml-6 space-y-2 text-sm md:text-base">
+            <li>
+              Catches every screenshot: PrtSc, Alt+PrtSc, Win+Shift+S, Snipping
+              Tool and Win+PrtSc.
+            </li>
+            <li>
+              Built-in region and full-screen capture with rebindable
+              shortcuts.
+            </li>
+            <li>
+              Drag &amp; drop anywhere, including several thumbnails at once.
+            </li>
+            <li>
+              Copy text from images with OCR, powered by the built-in Windows
+              engine. Nothing leaves your machine.
+            </li>
+            <li>Multi-monitor aware, deeply customizable and multilingual.</li>
+            <li>Fully offline: no account, no telemetry.</li>
+          </ul>
+          <TypographyP className="font-mono mt-8">
+            Built with Electron and released under the MIT license. Grab the
+            installer from the latest GitHub release.
           </TypographyP>
         </div>
       );
@@ -273,60 +330,6 @@ const projects: Project[] = [
   },
   {
     id: "project-3",
-    category: "Coming Soon",
-    title: "Coming Soon",
-    src: "",
-    screenshots: [],
-    skills: { frontend: [], backend: [] },
-    live: "",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono text-center">
-            🚧 This project is currently under construction. Stay tuned! 🚀
-          </TypographyP>
-        </div>
-      );
-    },
-  },
-  {
-    id: "project-4",
-    category: "Coming Soon",
-    title: "Coming Soon",
-    src: "",
-    screenshots: [],
-    skills: { frontend: [], backend: [] },
-    live: "",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono text-center">
-            🚧 This project is currently under construction. Stay tuned! 🚀
-          </TypographyP>
-        </div>
-      );
-    },
-  },
-  {
-    id: "project-5",
-    category: "Coming Soon",
-    title: "Coming Soon",
-    src: "",
-    screenshots: [],
-    skills: { frontend: [], backend: [] },
-    live: "",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono text-center">
-            🚧 This project is currently under construction. Stay tuned! 🚀
-          </TypographyP>
-        </div>
-      );
-    },
-  },
-  {
-    id: "project-6",
     category: "Coming Soon",
     title: "Coming Soon",
     src: "",

@@ -170,11 +170,11 @@ export const EDUCATION: Education[] = [
     id: 1,
     startDate: "2024",
     endDate: "Present",
-    degree: "2nd Year",
+    degree: "3rd Year",
     school: "Abdullah Gul University",
     description: [
       "Studying Computer Engineering",
-      "And Working On Some Projects On My Own",
+      "Building open-source tools, apps and games on the side",
     ],
   },
 ];

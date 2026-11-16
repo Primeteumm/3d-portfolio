@@ -1,9 +1,9 @@
 const config = {
   title: "Enes Aydın | Student Developer",
   description: {
-    long: "Explore the portfolio of Enes, a student developer and creative technologist specializing in interactive web experiences, Mobile Apps, and innovative projects. Discover my latest work. Let's build something amazing together!",
+    long: "Explore the portfolio of Enes, a third-year Computer Engineering student who turns ideas into things people can actually use: web and mobile apps, games, developer utilities and open-source tools like Screenshot Enhancer. Let's build something amazing together!",
     short:
-      "Discover the portfolio of Enes, a student developer creating interactive web experiences and innovative projects.",
+      "Discover the portfolio of Enes, a Computer Engineering student building web apps, games and open-source developer tools.",
   },
   keywords: [
     "Enes",
@@ -15,9 +15,13 @@ const config = {
     "web design",
     "React",
     "Next.js",
-    "Java",
+    "TypeScript",
     "Flutter",
-    "Python"
+    "Python",
+    "Electron",
+    "Unity",
+    "Godot",
+    "open source"
   ],
   author: "Enes Aydın",
   email: "aydinenes.dev@gmail.com",
