@@ -26,6 +26,7 @@ import {
   SiTailwindcss,
   SiThreedotjs,
   SiTypescript,
+  SiVercel,
   SiVuedotjs,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -237,6 +238,12 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiElectron />,
   },
+  vercel: {
+    title: "Vercel",
+    bg: "black",
+    fg: "white",
+    icon: <SiVercel />,
+  },
 };
 export type Project = {
   id: string;
@@ -311,19 +318,44 @@ const projects: Project[] = [
     },
   },
   {
-    id: "project-2",
-    category: "Coming Soon",
-    title: "Coming Soon",
-    src: "",
+    id: "qrkodcum",
+    category: "Web App · SaaS",
+    title: "QR Kodcum",
+    src: "/assets/projects-screenshots/qrkodcum/1.jpg",
     screenshots: [],
-    skills: { frontend: [], backend: [] },
-    live: "",
+    skills: {
+      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.react, PROJECT_SKILLS.ts],
+      backend: [PROJECT_SKILLS.supabase, PROJECT_SKILLS.vercel],
+    },
+    live: "https://qrkodcum.tr",
     get content() {
       return (
         <div>
-          <TypographyP className="font-mono text-center">
-            🚧 This project is currently under construction. Stay tuned! 🚀
+          <TypographyP className="font-mono text-2xl text-center">
+            Create QR codes and track every scan in real time.
           </TypographyP>
+          <TypographyP className="font-mono">
+            QR Kodcum is a dynamic QR code platform. Generate a code once, then
+            change where it points any time without reprinting it, and watch
+            scans come in live with device and country breakdowns, all from a
+            single dashboard.
+          </TypographyP>
+          <ProjectsLinks live={this.live} />
+          <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
+          <ul className="font-mono list-disc ml-6 space-y-2 text-sm md:text-base">
+            <li>
+              Dynamic QR codes with editable destinations and no scan limits.
+            </li>
+            <li>
+              Real-time analytics: scans over time, device types and countries.
+            </li>
+            <li>Instant redirects served from Vercel&apos;s edge network.</li>
+            <li>
+              Digital QR menus for restaurants: categories, photos, prices,
+              7 languages, waiter calls and bill requests.
+            </li>
+            <li>Download codes as PNG, JPG, SVG or WEBP.</li>
+          </ul>
         </div>
       );
     },
