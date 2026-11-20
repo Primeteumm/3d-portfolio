@@ -35,7 +35,7 @@ const config = {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    linkedin: "https://www.linkedin.com/in/enes-ayd%C4%B1n-3594773a0/",
+    linkedin: "https://www.linkedin.com/in/enes-aydin-dev",
     instagram: "https://www.instagram.com/eness_aydiin",
     twitter: "",
     github: "https://github.com/Primeteumm",
